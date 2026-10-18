@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FaceID - Reconocimiento Facial</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="icon" href="icon-rapidez.svg">
+</head>
+<body class="bg-[#F3F4F6] font-sans text-gray-800 antialiased flex flex-col min-h-screen">
+
+  <!-- HEADER -->
+  <header class="bg-white shadow-sm sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <!-- Logo y Nombre -->
+      <a href="#" class="flex items-center space-x-3">
+        <img src="logo-faceid.svg" alt="FaceID Logo" class="h-9 w-9 object-contain" />
+        <span class="text-2xl font-bold text-gray-900 tracking-tight">FaceID</span>
+      </a>
+
+      <!-- Menú Escritorio -->
+      <nav class="hidden md:flex items-center space-x-8 font-medium text-gray-600">
+        <a href="#inicio" class="hover:text-blue-600 transition">Inicio</a>
+        <a href="#servicios" class="hover:text-blue-600 transition">Servicios</a>
+        <a href="#contacto" class="hover:text-blue-600 transition">Contacto</a>
+      </nav>
+
+      <!-- Botón Iniciar Sesión (Escritorio) -->
+      <div class="hidden md:block">
+        <a href="#" class="bg-blue-600 text-white font-semibold px-6 py-2.5 rounded-xl hover:bg-blue-700 transition">
+          Iniciar Sesión
+        </a>
+      </div>
+
+      <!-- Botón Menú Móvil -->
+      <button id="menu-btn" class="md:hidden text-blue-600 p-2 focus:outline-none" aria-label="Abrir Menú">
+        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Menú Desplegable Móvil -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 px-6 py-4 space-y-3">
+      <a href="#inicio" class="block text-gray-700 font-medium py-1">Inicio</a>
+      <a href="#servicios" class="block text-gray-700 font-medium py-1">Servicios</a>
+      <a href="#contacto" class="block text-gray-700 font-medium py-1">Contacto</a>
+      <a href="#" class="block bg-blue-600 text-white text-center font-semibold py-2 rounded-xl mt-2">
+        Iniciar Sesión
+      </a>
+    </div>
+  </header>
+
+  <!-- HERO / BANNER PRINCIPAL -->
+  <section id="inicio" class="bg-[#111827] text-white py-12 md:py-20 relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+      
+      <!-- Texto Hero -->
+      <div class="space-y-6 text-center md:text-left z-10">
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+          Reconocimiento <br class="hidden md:inline"/>Facial
+        </h1>
+        <p class="text-gray-300 text-lg md:text-xl max-w-md mx-auto md:mx-0 font-light">
+          Tecnología que identifica rostros de forma rápida, segura y precisa.
+        </p>
+        <div>
+          <a href="#servicios" class="inline-block bg-blue-600 text-white font-semibold px-8 py-3.5 rounded-full hover:bg-blue-700 transition shadow-lg">
+            Conoce más
+          </a>
+        </div>
+      </div>
+
+      <!-- Imagen Principal (Escritorio) -->
+      <div class="flex justify-center md:justify-end">
+        <div class="relative rounded-2xl overflow-hidden border-2 border-cyan-500/30 shadow-2xl max-w-md w-full">
+          <img src="rostro-reconocimiento.jpg" alt="Reconocimiento Facial" class="w-full h-auto object-cover" />
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECCIÓN DE SEGUNDO NIVEL (CARDS) -->
+  <section id="servicios" class="py-16 md:py-24 bg-[#F3F4F6] flex-grow">
+    <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-8">
+      
+      <!-- Card 1 -->
+      <div class="bg-white rounded-3xl p-8 text-center shadow-sm hover:shadow-md transition flex flex-col items-center justify-between">
+        <div class="space-y-4 flex flex-col items-center">
+          <div class="w-16 h-16 flex items-center justify-center">
+            <img src="logo-faceid.svg" alt="Detección Facial" class="w-14 h-14 object-contain" />
+          </div>
+          <h3 class="text-2xl font-bold text-gray-900">Detección Facial</h3>
+          <p class="text-gray-600 max-w-sm">
+            Identifica rostros en tiempo real con alta precisión.
+          </p>
+        </div>
+        <a href="#" class="mt-6 inline-flex items-center justify-center bg-blue-600 text-white font-medium px-6 py-2.5 rounded-xl hover:bg-blue-700 transition w-auto">
+          Ver más <span class="ml-2">&rarr;</span>
+        </a>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="bg-white rounded-3xl p-8 text-center shadow-sm hover:shadow-md transition flex flex-col items-center justify-between">
+        <div class="space-y-4 flex flex-col items-center">
+          <div class="w-16 h-16 flex items-center justify-center">
+            <img src="icon-seguridad.svg" alt="Seguridad Inteligente" class="w-14 h-14 object-contain" />
+          </div>
+          <h3 class="text-2xl font-bold text-gray-900">Seguridad Inteligente</h3>
+          <p class="text-gray-600 max-w-sm">
+            Protege tu información con tecnología avanzada.
+          </p>
+        </div>
+        <a href="#" class="mt-6 inline-flex items-center justify-center bg-blue-600 text-white font-medium px-6 py-2.5 rounded-xl hover:bg-blue-700 transition w-auto">
+          Ver más <span class="ml-2">&rarr;</span>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="contacto" class="bg-[#111827] text-gray-300 py-8 border-t border-gray-800">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+      
+      <!-- Logo y Marca -->
+      <div class="flex items-center space-x-3">
+        <img src="logo-faceid.svg" alt="FaceID Logo" class="h-7 w-7 object-contain" />
+        <span class="text-xl font-bold text-white tracking-tight">FaceID</span>
+      </div>
+
+      <!-- Enlaces del Footer -->
+      <div class="flex items-center space-x-6 text-sm">
+        <a href="#inicio" class="hover:text-white transition">Inicio</a>
+        <a href="#servicios" class="hover:text-white transition">Servicios</a>
+        <a href="#contacto" class="hover:text-white transition">Contacto</a>
+      </div>
+
+      <!-- Redes Sociales -->
+      <div class="flex items-center space-x-4 text-lg">
+        <a href="#" class="hover:text-white transition" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="hover:text-white transition" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="hover:text-white transition" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+
+      <!-- Derechos de Autor -->
+      <div class="text-sm text-gray-400">
+        &copy; 2026 FaceID. Todos los derechos reservados.
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Script para menú móvil -->
+  <script>
+    const btn = document.getElementById('menu-btn');
+    const menu = document.getElementById('mobile-menu');
+
+    btn.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+  </script>
+
+</body>
+</html>
